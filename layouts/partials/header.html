@@ -4,10 +4,12 @@
         	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
         </div>
         <div class="menu navbar-right">
+                <link href="/fontawesome/css/all.min.css" rel="stylesheet">
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
                 <a class="menu-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
                 {{ end }}
+                <a href="https://survivablemistakes.com" target="_blank"><i class="fas fa-mountain"></i></a>
                 <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
         </div>
     </div>
@@ -20,7 +22,7 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-     
+
           <div class="menu" id="mobile-menu">
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
